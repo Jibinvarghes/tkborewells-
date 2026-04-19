@@ -1,347 +1,169 @@
 <!DOCTYPE html>
+
 <html lang="ml">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TK Borewells – Ayarkunnam, Kerala</title>
-  <meta name="description" content="Expert borewell drilling and tubewell services in Ayarkunnam, Kerala. Call TK Borewells for free site visit and estimate." />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --brand: #1a5c9e;
-      --brand-dark: #0d3f73;
-      --brand-light: #e8f2fc;
-      --accent: #e67c1b;
-      --wa: #25D366;
-      --text: #1a1a1a;
-      --muted: #555;
-      --border: rgba(0,0,0,0.1);
-    }
-    body { font-family: 'Georgia', serif; color: var(--text); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* NAV */
-    .nav {
-      background: var(--brand-dark);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      position: sticky; top: 0; z-index: 100;
-    }
-    .nav-logo { color: #fff; font-size: 20px; font-weight: bold; letter-spacing: 1px; font-family: sans-serif; }
-    .nav-logo span { color: #f9a825; }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 12px; font-family: sans-serif; }
-    .nav-links a:hover { color: #fff; }
+<title>TK Borewells Ayarkunnam | ബോർവെൽ ഡ്രില്ലിംഗ് കേരളം</title>
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #0d3f73 0%, #1a5c9e 60%, #1e6fbd 100%);
-      color: #fff;
-      padding: 5rem 2rem 4rem;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(249,168,37,0.2);
-      border: 1px solid rgba(249,168,37,0.5);
-      color: #f9c74f;
-      font-size: 12px;
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-bottom: 1rem;
-      font-family: sans-serif;
-      letter-spacing: 1px;
-    }
-    .hero h1 { font-size: 32px; margin-bottom: 0.5rem; }
-    .hero h1 span { color: #f9c74f; }
-    .hero-ml { font-size: 17px; color: rgba(255,255,255,0.75); font-family: sans-serif; margin-bottom: 1rem; }
-    .hero p { font-size: 14px; color: rgba(255,255,255,0.8); font-family: sans-serif; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--accent); color: #fff;
-      padding: 13px 26px; border-radius: 4px; border: none;
-      font-size: 14px; font-family: sans-serif; font-weight: bold; cursor: pointer;
-    }
-    .btn-wa {
-      background: var(--wa); color: #fff;
-      padding: 13px 26px; border-radius: 4px; border: none;
-      font-size: 14px; font-family: sans-serif; font-weight: bold; cursor: pointer;
-      display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
-    }
-    .wa-icon { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+<meta name="description" content="TK Borewells Ayarkunnam: Kerala borewell drilling, pump installation, water solutions. Free site visit. Call 9447164241."/>
+<meta name="keywords" content="borewell Kerala, Ayarkunnam borewell, borewell drilling Kerala, water drilling Kerala, ബോർവെൽ കേരളം"/>
 
-    /* STARS BAR */
-    .stars-bar {
-      background: #fff; border-bottom: 1px solid var(--border);
-      padding: 10px 2rem;
-      display: flex; align-items: center; justify-content: center;
-      gap: 8px; font-family: sans-serif; font-size: 13px; color: var(--muted); flex-wrap: wrap;
-    }
-    .stars { color: #f9a825; font-size: 16px; }
+<!-- Open Graph -->
 
-    /* SECTIONS */
-    .section { padding: 3.5rem 2rem; }
-    .section-alt { background: #f7f9fc; }
-    .section-title { font-size: 26px; color: var(--brand-dark); margin-bottom: 0.2rem; text-align: center; }
-    .section-title-ml { font-size: 16px; color: var(--accent); text-align: center; font-family: sans-serif; margin-bottom: 0.4rem; }
-    .divider { width: 48px; height: 3px; background: var(--accent); margin: 0.5rem auto 1.5rem; }
-    .section-sub { text-align: center; font-family: sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 2rem; }
+<meta property="og:title" content="TK Borewells Kerala"/>
+<meta property="og:description" content="Expert borewell drilling in Kerala"/>
+<meta property="og:type" content="website"/>
 
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.25rem; max-width: 900px; margin: 0 auto;
-    }
-    .service-card {
-      background: #fff; border: 0.5px solid var(--border);
-      border-radius: 8px; padding: 1.5rem 1.25rem; text-align: center;
-    }
-    .service-icon {
-      width: 50px; height: 50px; background: var(--brand-light);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1rem;
-    }
-    .service-icon svg { width: 22px; height: 22px; fill: var(--brand); }
-    .service-card h3 { font-size: 14px; color: var(--brand-dark); margin-bottom: 2px; font-family: sans-serif; font-weight: 600; }
-    .service-card .ml-label { font-size: 13px; color: var(--accent); font-family: sans-serif; margin-bottom: 6px; }
-    .service-card p { font-size: 12px; color: var(--muted); font-family: sans-serif; line-height: 1.6; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* STATS */
-    .stats-row {
-      display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
-      padding: 2.5rem 2rem; background: var(--brand-dark); color: #fff;
-    }
-    .stat { text-align: center; }
-    .stat-num { font-size: 32px; font-weight: bold; color: #f9c74f; }
-    .stat-label { font-size: 12px; font-family: sans-serif; color: rgba(255,255,255,0.75); margin-top: 2px; }
-    .stat-ml { font-size: 11px; font-family: sans-serif; color: rgba(255,255,255,0.5); margin-top: 2px; }
+<style>
+:root{
+  --primary:#0d3f73;
+  --accent:#f9a825;
+  --green:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;}
 
-    /* WHY */
-    .why-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 1rem; max-width: 900px; margin: 0 auto;
-    }
-    .why-card {
-      background: #fff; border-left: 3px solid var(--brand);
-      padding: 1rem 1.25rem; border-radius: 0 6px 6px 0;
-    }
-    .why-card h4 { font-size: 13px; font-family: sans-serif; font-weight: 600; color: var(--brand-dark); margin-bottom: 2px; }
-    .why-card .wml { font-size: 12px; font-family: sans-serif; color: var(--accent); margin-bottom: 4px; }
-    .why-card p { font-size: 12px; font-family: sans-serif; color: var(--muted); line-height: 1.5; }
+html{scroll-behavior:smooth;}
 
-    /* CONTACT */
-    .contact-card {
-      max-width: 560px; margin: 0 auto;
-      background: #fff; border: 0.5px solid var(--border);
-      border-radius: 10px; padding: 2rem;
-    }
-    .contact-row {
-      display: flex; align-items: flex-start; gap: 1rem;
-      margin-bottom: 1.25rem; font-family: sans-serif;
-    }
-    .contact-icon {
-      width: 38px; height: 38px; min-width: 38px;
-      background: var(--brand-light); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .contact-icon svg { width: 16px; height: 16px; fill: var(--brand); }
-    .contact-label { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 2px; }
-    .contact-val { font-size: 14px; color: var(--text); font-weight: 500; }
-    .contact-ml { font-size: 12px; color: var(--muted); margin-top: 2px; }
-    .wa-float { display: flex; justify-content: center; margin-top: 2rem; }
-    .wa-big {
-      background: var(--wa); color: #fff;
-      padding: 15px 36px; border-radius: 50px;
-      font-size: 15px; font-family: sans-serif; font-weight: bold;
-      text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
-    }
-    .wa-big svg { width: 20px; height: 20px; fill: #fff; }
+/* NAV */
+nav{
+  position:sticky;top:0;
+  background:white;
+  display:flex;justify-content:space-between;
+  padding:15px 25px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+nav h2{color:var(--primary);}
+nav a{margin-left:15px;text-decoration:none;color:#555;font-size:14px;}
 
-    /* FOOTER */
-    .footer {
-      background: #0a2d54; color: rgba(255,255,255,0.6);
-      text-align: center; padding: 1.5rem 2rem;
-      font-family: sans-serif; font-size: 12px; line-height: 1.8;
-    }
-    .footer span { color: rgba(255,255,255,0.9); }
+/* HERO */
+.hero{
+  height:85vh;
+  background:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1600') center/cover;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:white;
+  position:relative;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;background:rgba(0,0,0,0.6);
+}
+.hero-content{position:relative;z-index:1;max-width:700px;}
+.hero h1{font-size:36px;}
+.hero p{margin:15px 0;}
+.btn{padding:12px 25px;border-radius:30px;border:none;margin:5px;font-weight:600;}
+.btn-primary{background:var(--accent);color:white;}
+.btn-wa{background:var(--green);color:white;text-decoration:none;}
 
-    /* RESPONSIVE */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 24px; }
-      .nav-links { gap: 1rem; }
-      .stats-row { gap: 1.5rem; }
-    }
-  </style>
+/* SECTION */
+.section{padding:60px 20px;text-align:center;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:auto;}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
+
+/* REVIEWS */
+.reviews{background:#f7f9fc;}
+.review{font-size:14px;color:#555;}
+.stars{color:#f9a825;}
+
+/* MAP */
+.map iframe{width:100%;height:300px;border:0;border-radius:10px;}
+
+/* FLOAT WA */
+.wa{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;padding:15px;border-radius:50%;
+text-decoration:none;
+}
+
+/* FOOTER */
+footer{background:#0a2d54;color:white;text-align:center;padding:20px;font-size:13px;}
+</style>
+
+<!-- Local SEO Schema -->
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"LocalBusiness",
+"name":"TK Borewells",
+"image":"https://jibinvarghes.github.io/tkborewells-/",
+"telephone":"+919447164241",
+"address":{
+"@type":"PostalAddress",
+"addressLocality":"Ayarkunnam",
+"addressRegion":"Kerala",
+"postalCode":"686564",
+"addressCountry":"IN"
+}
+}
+</script>
+
 </head>
+
 <body>
 
-<!-- NAVIGATION -->
-<nav class="nav">
-  <div class="nav-logo">TK <span>BOREWELLS</span></div>
-  <div class="nav-links">
-    <a href="#services">സേവനങ്ങൾ</a>
-    <a href="#about">ഞങ്ങളെക്കുറിച്ച്</a>
-    <a href="#contact">ബന്ധപ്പെടുക</a>
-  </div>
+<nav>
+<h2>TK Borewells</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">★ അയർക്കുന്നം, കേരളം</div>
-  <h1>Expert <span>Borewell</span> Drilling<br>&amp; Tubewell Services</h1>
-  <div class="hero-ml">വിദഗ്ധ ബോർവെൽ ഡ്രില്ലിംഗ് സേവനങ്ങൾ</div>
-  <p>വീടുകൾ, കൃഷിയിടങ്ങൾ, വ്യവസായ ആവശ്യങ്ങൾക്കായി കേരളത്തിലുടനീളം വിശ്വസനീയമായ ഭൂഗർഭജല പരിഹാരങ്ങൾ. നൂറുകണക്കിന് ഉപഭോക്താക്കൾ വിശ്വസിക്കുന്നു.</p>
-  <div class="hero-btns">
-    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">📞 സൗജന്യ ക്വോട്ട് നേടൂ</button>
-    <a class="btn-wa" href="https://wa.me/919447164241?text=Hello%20TK%20Borewells%2C%20I%20need%20a%20borewell%20quote" target="_blank">
-      <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp ചെയ്യൂ
-    </a>
-  </div>
-</section>
-
-<!-- STARS BAR -->
-<div class="stars-bar">
-  <span class="stars">★★★★★</span>
-  <strong>5.0</strong> Google Rating &nbsp;·&nbsp;
-  5 അഭിപ്രായങ്ങൾ &nbsp;·&nbsp;
-  Tubewell Contractor, Ayarkunnam
+<div class="hero-content">
+<h1>കേരളത്തിലെ വിശ്വസനീയമായ ബോർവെൽ സേവനം</h1>
+<p>Reliable Borewell Drilling in Ayarkunnam & Kerala</p>
+<button class="btn btn-primary" onclick="location.href='tel:9447164241'">📞 Call Now</button>
+<a class="btn btn-wa" href="https://wa.me/919447164241">WhatsApp</a>
 </div>
-
-<!-- SERVICES -->
-<section class="section section-alt" id="services">
-  <div class="section-title">Our Services</div>
-  <div class="section-title-ml">ഞങ്ങളുടെ സേവനങ്ങൾ</div>
-  <div class="divider"></div>
-  <p class="section-sub">ആധുനിക ഉപകരണങ്ങളോടെ പ്രൊഫഷണൽ ഭൂഗർഭജല പരിഹാരങ്ങൾ</p>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 5 4 9c0 5 8 13 8 13s8-8 8-13c0-4-3.6-7-8-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg></div>
-      <h3>Borewell Drilling</h3>
-      <div class="ml-label">ബോർവെൽ ഡ്രില്ലിംഗ്</div>
-      <p>വീടുകൾ, കൃഷി, വ്യവസായ ആവശ്യങ്ങൾക്ക് ആഴമേറിയ ബോർവെൽ ഡ്രില്ലിംഗ്</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2zm0 12c-5.3 0-8 2.7-8 4v2h16v-2c0-1.3-2.7-4-8-4z"/></svg></div>
-      <h3>Pump Installation</h3>
-      <div class="ml-label">പമ്പ് ഇൻസ്റ്റലേഷൻ</div>
-      <p>സബ്മേഴ്സിബിൾ പമ്പ്, മോട്ടോർ, കൺട്രോളർ വിതരണം &amp; സ്ഥാപനം</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.4-1.4L12 14.2l7.6-7.6L21 8l-9 9z"/></svg></div>
-      <h3>Borewell Testing</h3>
-      <div class="ml-label">ബോർവെൽ പരിശോധന</div>
-      <p>ജല ഉൽപ്പാദന ടെസ്റ്റ്, ഗുണനിലവാര പരിശോധന, ആഴം അളക്കൽ</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.72L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.81 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg></div>
-      <h3>Maintenance &amp; Repair</h3>
-      <div class="ml-label">അറ്റകുറ്റപ്പണി</div>
-      <p>ബോർവെൽ ക്ലീനിംഗ്, കേസിംഗ് റിപ്പയർ, പമ്പ് സർവ്വീസ്</p>
-    </div>
-  </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-row">
-  <div class="stat">
-    <div class="stat-num">500+</div>
-    <div class="stat-label">Borewells Drilled</div>
-    <div class="stat-ml">ബോർവെല്ലുകൾ</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">15+</div>
-    <div class="stat-label">Years Experience</div>
-    <div class="stat-ml">വർഷത്തെ അനുഭവം</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">5.0★</div>
-    <div class="stat-label">Google Rating</div>
-    <div class="stat-ml">ഗൂഗിൾ റേറ്റിംഗ്</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">24/7</div>
-    <div class="stat-label">Support</div>
-    <div class="stat-ml">അടിയന്തര സഹായം</div>
-  </div>
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card">Borewell Drilling</div>
+<div class="card">Pump Installation</div>
+<div class="card">Testing</div>
+<div class="card">Maintenance</div>
 </div>
-
-<!-- WHY US -->
-<section class="section" id="about">
-  <div class="section-title">Why Choose Us?</div>
-  <div class="section-title-ml">എന്തുകൊണ്ട് TK Borewells?</div>
-  <div class="divider"></div>
-  <div class="why-grid">
-    <div class="why-card">
-      <h4>Modern Equipment</h4>
-      <div class="wml">ആധുനിക ഉപകരണങ്ങൾ</div>
-      <p>കൃത്യമായ ഡ്രില്ലിംഗിനായി ഏറ്റവും പുതിയ DTH റിഗ്ഗുകൾ</p>
-    </div>
-    <div class="why-card">
-      <h4>Experienced Team</h4>
-      <div class="wml">പരിചയസമ്പന്ന സംഘം</div>
-      <p>കേരളത്തിന്റെ ഭൂഗർഭ ഘടന അറിയുന്ന വിദഗ്ദ്ധർ</p>
-    </div>
-    <div class="why-card">
-      <h4>Transparent Pricing</h4>
-      <div class="wml">സുതാര്യമായ വില</div>
-      <p>മറഞ്ഞിരിക്കുന്ന ചാർജില്ല — ലിഖിത എസ്റ്റിമേറ്റ് നൽകുന്നു</p>
-    </div>
-    <div class="why-card">
-      <h4>After-Sales Support</h4>
-      <div class="wml">വിൽപ്പനാനന്തര സഹായം</div>
-      <p>ജോലി തീർന്നതിന് ശേഷവും ഉപഭോക്തൃ സഹായം</p>
-    </div>
-  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section section-alt" id="contact">
-  <div class="section-title">Contact Us</div>
-  <div class="section-title-ml">ബന്ധപ്പെടുക</div>
-  <div class="divider"></div>
-  <p class="section-sub">സൗജന്യ സൈറ്റ് സന്ദർശനവും എസ്റ്റിമേറ്റും നൽകുന്നു</p>
-  <div class="contact-card">
-    <div class="contact-row">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></div>
-      <div>
-        <div class="contact-label">വിലാസം / Address</div>
-        <div class="contact-val">Kunnathettu Agencies, Ayarkunnam, Kerala 686564</div>
-        <div class="contact-ml">കുന്നത്തെട്ട് ഏജൻസീസ്, അയർക്കുന്നം</div>
-      </div>
-    </div>
-    <div class="contact-row">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
-      <div>
-        <div class="contact-label">ഫോൺ / Phone</div>
-        <div class="contact-val" style="color:var(--brand)">+91 94471 64241</div>
-        <div class="contact-ml">വിളിക്കൂ — സൗജന്യ ക്വോട്ടിന്</div>
-      </div>
-    </div>
-    <div class="contact-row" style="margin-bottom:0">
-      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
-      <div>
-        <div class="contact-label">സമയം / Hours</div>
-        <div class="contact-val">Monday – Saturday, 8 AM – 6 PM</div>
-        <div class="contact-ml">തിങ്കൾ – ശനി, രാവിലെ 8 – വൈകിട്ട് 6</div>
-      </div>
-    </div>
-  </div>
-  <div class="wa-float">
-    <a class="wa-big" href="https://wa.me/919447164241?text=Hello%20TK%20Borewells%2C%20I%20need%20a%20borewell%20quote" target="_blank">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp-ൽ സന്ദേശം അയക്കൂ &nbsp;·&nbsp; 94471 64241
-    </a>
-  </div>
+<section class="section reviews" id="reviews">
+<h2>Customer Reviews</h2>
+<div class="grid">
+<div class="card">
+<div class="stars">★★★★★</div>
+<p class="review">Very professional service. Got water successfully!</p>
+</div>
+<div class="card">
+<div class="stars">★★★★★</div>
+<p class="review">Quick work and good pricing.</p>
+</div>
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  © 2025 <span>TK Borewells, Ayarkunnam, Kerala</span> · എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം<br>
-  Tubewell Contractor · +91 94471 64241
+<section class="section">
+<h2>Our Location</h2>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Ayarkunnam Kerala&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<p>📞 94471 64241</p>
+<p>📍 Ayarkunnam, Kerala</p>
+</section>
+
+<a class="wa" href="https://wa.me/919447164241">💬</a>
+
+<footer>
+© TK Borewells Kerala • All Rights Reserved
 </footer>
 
 </body>
